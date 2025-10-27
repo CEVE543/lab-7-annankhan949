@@ -47,43 +47,10 @@ bibliography:
 
 ---
 
-## Background and Goals
-
-Climate models have systematic biases that directly affect impact assessments, arising from coarse spatial resolution, parameterization of sub-grid processes, representation of topography, and errors in simulated circulation patterns.
-This lab implements two widely-used bias correction approaches: the delta method and quantile-quantile (QQ) mapping.
-The delta method preserves the climate model's change signal while anchoring absolute values to observations, whereas QQ-mapping corrects the full distribution of values.
-
-Both methods assume stationarity—that the statistical relationship between model and observations remains constant across climate states.
-This assumption may not hold under significant climate change.
-We'll explore the strengths and limitations of each method using temperature data for Boston, providing hands-on experience before PS2 Part 1.
-
-## Study Location and Data
-
-This lab uses temperature data for Boston Logan International Airport (Station ID: USW00014739, 42.3631$^\circ$N, 71.0064$^\circ$W).
-Observational data comes from GHCN-Daily (1936-2024) and is provided in the `USW00014739.csv` file in degrees Celsius.
-Climate model data comes from the GFDL-ESM4 model's 3-hourly near-surface air temperature (`tas`), pre-downloaded from Google Cloud Storage for both historical (1850-2014) and SSP3-7.0 (2015-2100) scenarios.
-Refer to [Lab 6](/labs/Lab-6/index.qmd) for details on CMIP6 data structure.
-
-### Data Processing Notes
-
-The GHCN data provides daily average temperature in degrees Celsius.
-CMIP6 provides 3-hourly instantaneous temperature in Kelvin, which we'll convert to Celsius and aggregate to daily averages.
-The pre-downloaded NetCDF files (`boston_historical.nc` and `boston_ssp370.nc`) contain 3-hourly surface air temperature for the grid cell nearest to Boston.
-We aggregate 8 consecutive 3-hour periods to approximate daily averages, ignoring daylight saving time—a simplification typical in many bias correction applications.
-If you're interested in applying these methods to a different location, the `download_data.jl` script demonstrates how to extract CMIP6 data from Google Cloud Storage.
-
-::: {.callout-important}
-## Before Starting
-
-Before starting the lab, uncomment the `Pkg.instantiate()` line in the first code block and run it to install all required packages.
-This will take a few minutes the first time.
-After installation completes, comment the line back out to avoid reinstalling on subsequent runs.
-:::
-
 ::: {.callout-important}
 ## references.bib
 
-The render was not working because it was struggling to load bibliography("../../references.bib"). I got rid of it so the render would work, originally tried to grab reference.bib from older labs and add into directory but it still would not print. 
+The render was not working because it was struggling to load bibliography("../../references.bib").  I was able to fix it by switching the way the location of it was referenced but then it said the file did not have ines_biascorrection:2006 paper reference.
 :::
 
 ## Lab Implementation
