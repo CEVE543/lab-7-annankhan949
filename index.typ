@@ -1123,5 +1123,5 @@ white
 
 
 
-#bibliography("/Users/annankhan/Desktop/CEVE 543 Problem Sets/lab-7-annankhan949/references.bib")
+#bibliography("references.bib")
 

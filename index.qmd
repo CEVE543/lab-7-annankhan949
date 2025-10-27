@@ -510,7 +510,7 @@ Write brief responses (2-3 sentences each) to the following questions:
 1. **Method selection:** If you were providing climate data to support a decision about urban heat management in Boston, which bias correction method would you recommend and why?
 
 
-2. **Appropriateness of QQ-mapping:** In the @ines_biascorrection:2006 paper we discussed, QQ-mapping was used to correct both the *frequency* and *intensity* of rainfall for crop modeling. For temperature data, does it make sense to correct the full distribution? Why or why not? When might the delta method be more appropriate than QQ-mapping?
+2. **Appropriateness of QQ-mapping:** In the ines_biascorrection:2006 paper we discussed, QQ-mapping was used to correct both the *frequency* and *intensity* of rainfall for crop modeling. For temperature data, does it make sense to correct the full distribution? Why or why not? When might the delta method be more appropriate than QQ-mapping?
 :::
 
 #### Method Selection for Urban Heat Management
