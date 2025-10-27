@@ -348,6 +348,32 @@ body_background_color:
 white
 )
 ]
+#block[
+#callout(
+body: 
+[
+The render was not working because it was struggling to load bibliography("../../references.bib"). I got rid of it so the render would work, originally tried to grab reference.bib from older labs and add into directory but it still would not print.
+
+]
+, 
+title: 
+[
+references.bib
+]
+, 
+background_color: 
+rgb("#f7dddc")
+, 
+icon_color: 
+rgb("#CC1914")
+, 
+icon: 
+fa-exclamation()
+, 
+body_background_color: 
+white
+)
+]
 = Lab Implementation
 <lab-implementation>
 == Package Setup
@@ -1096,6 +1122,4 @@ white
 
 
 
-
-#bibliography("../../references.bib")
 
