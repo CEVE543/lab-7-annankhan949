@@ -42,7 +42,7 @@ code-overflow: wrap
 code-line-numbers: false
 code-block-font-size: "0.85em"
 
-bibliography: ../../references.bib
+#bibliography: ../../references.bib
 ---
 
 ## Background and Goals
@@ -76,6 +76,12 @@ If you're interested in applying these methods to a different location, the `dow
 Before starting the lab, uncomment the `Pkg.instantiate()` line in the first code block and run it to install all required packages.
 This will take a few minutes the first time.
 After installation completes, comment the line back out to avoid reinstalling on subsequent runs.
+:::
+
+::: {.callout-important}
+## references.bib
+
+The render was not working because it was struggling to load bibliography("../../references.bib"). I got rid of it so the render would work, originally tried to grab reference.bib from older labs and add into directory but it still would not print. 
 :::
 
 ## Lab Implementation
